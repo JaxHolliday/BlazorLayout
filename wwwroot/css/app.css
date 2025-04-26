@@ -1,9 +1,36 @@
+:root {
+    --cf-title-font: 'Bebas Neue', sans-serif;
+    --cf-body-font: 'Montserrat', sans-serif;
+    --cf-dark-color: #212121;
+    --cf-light-color: #deeefb;
+    --cf-font-size: 1.1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--cf-title-font);
+    font-weight: 400;
+    color: var(--cf-dark-color);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--cf-title-font);
+    font-weight: 400;
+    color: var(--cf-dark-color);
+}
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--cf-body-font);
+    font-size: var(--cf-font-size);
+    height: 100%;
+    min-height: 100vh;
 }
 
 h1:focus {
     outline: none;
+}
+
+#app {
+    height: 100%;
 }
 
 a, .btn-link {
@@ -101,3 +128,4 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
