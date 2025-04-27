@@ -1,0 +1,17 @@
+﻿/*This class customizes the background color of the entire navigation bar using the custom CSS variable */
+.navStyle {
+    background-color: var(--cf-theme-850); /* Applies a theme-specific background color */
+}
+/*Sets custom colors for the hover state on navbar items, using Bootstrap’s built-in variables, which are overridden with theme-specific colors*/
+.nav-item {
+    --bs-navbar-hover-color: var(--cf-theme-400); /* Sets hover color for navbar items */
+    --bs-nav-link-hover-color: var(--cf-theme-400); /* Sets hover color for nav links */
+}
+/*Sets the background color of the dropdown menu to --cf-theme-900, a custom theme variable for additional customization.*/
+.dropdown-menu {
+    background-color: var(--cf-theme-900); /* Sets a custom background color for the dropdown menu */
+}
+/*Uses the :has() selector to apply a color to the dropdown toggle when any link within the dropdown is active.*/
+.dropdown:has(.nav-link.active) .dropdown-toggle {
+    color: var(--bs-navbar-active-color); /* Changes color of dropdown toggle when an item is active */
+}
