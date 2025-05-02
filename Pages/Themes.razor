@@ -2,10 +2,8 @@
 @inject IJSRuntime JS
 
 <PageTitle>Template Themes</PageTitle>
-
-<div class="mt-5">
-    <h1 class="text-center">Template Themes</h1>
-
+<h1 class="text-center mt-3">Built in themes for your template</h1>
+<div class="d-flex flex-wrap gap-3 align-items-center justify-content-center my-3">    
     @foreach (string theme in siteThemes)
     {
         <div class="card" data-cf-theme="@theme">
