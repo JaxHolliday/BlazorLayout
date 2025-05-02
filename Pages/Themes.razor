@@ -1,0 +1,52 @@
+﻿@page "/themes"
+@inject IJSRuntime JS
+
+<PageTitle>Template Themes</PageTitle>
+
+<div class="mt-5">
+    <h1 class="text-center">Template Themes</h1>
+
+    <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center my-3">
+
+
+    </div>
+</div>
+
+@code {
+    public async Task ChangeTheme(string theme)
+    {
+        //setTheme is defined in index.html
+        await JS.InvokeVoidAsync("setTheme", theme);
+    }
+
+    List<string> siteThemes = new(){
+        "code-magic",
+        "blue",
+        "indigo",
+        "purple",
+        "pink",
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "teal",
+        "cyan",
+        "gray"
+    };
+
+    List<string> Weights = new()
+    {
+        "core",
+        "100",
+        "150",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800",
+        "850",
+        "900"
+    };
+}
